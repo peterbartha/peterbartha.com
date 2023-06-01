@@ -19,5 +19,9 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# deployment
+.vercel
+
 # pnpm
+# this should be the only diff compared to `.gitignore`
 pnpm-lock.yaml
