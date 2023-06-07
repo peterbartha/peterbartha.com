@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'BitterVariable';
+  src: url('/fonts/bitter-variable-subset.woff2') format('woff2-variations');
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: 'Wotfard';
+  src: url('/fonts/wotfard-regular-subset.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Wotfard';
+  src: url('/fonts/wotfard-medium-subset.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Wotfard';
+  src: url('/fonts/wotfard-semibold-subset.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans;
+  }
+}

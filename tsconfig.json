@@ -3,11 +3,13 @@
   "compilerOptions": {
     // tell when import type should be used
     "verbatimModuleSyntax": true,
+    "baseUrl": ".",
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@data/*": ["src/data/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@styles/*": ["src/styles/*"]
     }
   }
 }
