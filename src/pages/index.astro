@@ -1,8 +1,15 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import type { Metadata } from '@components/SeoMeta.astro';
+import { author } from '@data/author';
+
+const meta: Metadata = {
+  title: author,
+  description: `${author} is a skilled web engineer specializing in web technologies and the JavaScript ecosystem. Peter delivers innovative solutions for seamless user experiences.`,
+};
 ---
 
-<BaseLayout>
+<BaseLayout {meta}>
   <h1>Astro</h1>
   <p>Content</p>
 </BaseLayout>
