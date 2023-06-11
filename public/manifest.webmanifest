@@ -1,0 +1,19 @@
+{
+  "name": "Peter Bartha",
+  "short_name": "PB",
+  "icons": [
+    {
+      "type": "image/png",
+      "sizes": "192x192",
+      "src": "/favicons/icon-192.png"
+    },
+    {
+      "type": "image/png",
+      "sizes": "512x512",
+      "src": "/favicons/icon-512.png"
+    }
+  ],
+  "theme_color": "#6fdcbf",
+  "background_color": "#ddfaf6",
+  "display": "standalone"
+}

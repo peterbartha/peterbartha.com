@@ -12,7 +12,12 @@ const { meta } = Astro.props;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="generator" content={Astro.generator} />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#ddfaf6" />
+    <link rel="icon" type="image/png" href="/favicons/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+    <link rel="mask-icon" href="/favicons/safari-mask-icon.svg" color="#2dbcb7" />
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
 
     <SeoMeta {...meta} />
   </head>
