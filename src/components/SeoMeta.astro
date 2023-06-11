@@ -35,7 +35,7 @@ export type Metadata = Props;
 const {
   title,
   description,
-  canonicalUrl = Astro.url.href,
+  canonicalUrl = new URL(Astro.url.pathname, Astro.site).href,
   image,
   twitterCardType = 'summary_large_image',
   publishedTime,
