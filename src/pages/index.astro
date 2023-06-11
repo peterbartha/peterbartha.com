@@ -1,7 +1,8 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import Link from '@components/Link.astro';
 import type { Metadata } from '@components/SeoMeta.astro';
 import { author } from '@data/author';
+import BaseLayout from '@layouts/BaseLayout.astro';
 
 const meta: Metadata = {
   title: author,
@@ -12,4 +13,5 @@ const meta: Metadata = {
 <BaseLayout {meta}>
   <h1>Astro</h1>
   <p>Content</p>
+  <Link href="/" target="_blank" aria-label="open something" noRecommendation>Sample</Link>
 </BaseLayout>
