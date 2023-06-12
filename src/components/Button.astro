@@ -1,0 +1,66 @@
+---
+import Link from '@components/Link.astro';
+import type { HTMLAttributes } from 'astro/types';
+
+/* Workaround for incompatible `slot` type: 'string | null | undefined' is not assignable to type 'string' */
+export interface Props extends Omit<HTMLAttributes<'a'>, 'slot'> {
+  size?: 'small' | 'normal';
+  secondary?: boolean;
+}
+const { size = 'normal', secondary = false, ...props } = Astro.props;
+---
+
+<Link
+  class:list={[
+    'btn group',
+    'relative inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-bl-[15px] rounded-br-[35px] rounded-tl-[45px] rounded-tr-[35px] font-medium text-indigo-800 no-underline',
+    'before:absolute before:left-[-10%] before:top-[-110%] before:h-0 before:w-[120%] before:rounded-[50%] before:bg-indigo-800 before:pb-[120%] before:content-[""]',
+    'hover:before:transition-transform hover:before:duration-[0.4s] hover:before:ease-[cubic-bezier(0.1,0,0.3,1)]',
+    'after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-indigo-900 after:transition-transform after:duration-[0.4s] after:ease-[cubic-bezier(0.1,0,0.3,1)] after:content-[""]',
+    'hover:after:delay-[0.4s] hover:after:duration-[0.05s] hover:after:ease-linear',
+    size === 'small' ? 'h-[40px] text-normal px-6' : 'h-[60px] text-lg px-10',
+    secondary
+      ? 'bg-transparent border border-bermuda-300 hover:transition-[border-color] hover:delay-[0.15s] hover:duration-[0.3s] hover:ease-linear hover:border-indigo-800'
+      : 'bg-bermuda-300',
+  ]}
+  {...props}
+>
+  <span
+    class="relative z-10 flex flex-row items-center gap-2 text-indigo-800 group-hover:animate-[LabelMoveAndScaleUpStart_0.3s_forwards,LabelMoveAndScaleUpEnd_0.3s_forwards_0.3s] group-hover:text-white group-hover:transition-[color] group-hover:delay-[0.15s] group-hover:duration-[0.3s] group-hover:ease-linear"
+  >
+    <slot />
+  </span>
+</Link>
+
+<style>
+  .btn::before {
+    transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
+  }
+  .btn::after {
+    transform: translate3d(0, -100%, 0);
+  }
+  .btn:hover::before {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  .btn:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+
+  @keyframes LabelMoveAndScaleUpStart {
+    to {
+      transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes LabelMoveAndScaleUpEnd {
+    from {
+      transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+</style>
