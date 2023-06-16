@@ -12,8 +12,8 @@ const pathname = typeof href === 'string' ? href : href?.pathname;
 let isActive = false;
 if (
   !href ||
-  (href as URL)?.origin !== Astro.site?.origin ||
-  !(href as string)?.startsWith(Astro.site?.origin!)
+  (typeof href !== 'string' && href.origin !== Astro.site?.origin) ||
+  (href as string).startsWith('http')
 ) {
   isActive = false;
 } else if ((href as string) === '/' || (href as URL).pathname === '/') {
