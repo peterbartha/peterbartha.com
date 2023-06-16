@@ -1,0 +1,118 @@
+---
+import logoImage from '../assets/logo.svg';
+import Link from './Link.astro';
+---
+
+<header class="sticky top-0 z-50 w-screen max-w-full bg-mint-100">
+  <nav class="container mx-auto flex w-full flex-row items-center justify-between gap-8 py-4">
+    <a
+      href="/"
+      class="hover:text-brand flex flex-row items-center text-[18px]"
+      aria-label="home page"
+    >
+      <img
+        src={logoImage}
+        width={50}
+        height="50"
+        loading="eager"
+        decoding="async"
+        alt="Peter Bartha's logo"
+      />
+      <span class="px-3">Peter Bartha</span>
+    </a>
+
+    <input type="checkbox" id="menu-helper" class="peer absolute h-[1px] w-[1px] opacity-0" />
+    <div
+      id="mobile-menu"
+      class="closed group fixed inset-0 z-10 flex h-screen flex-1 items-center justify-end bg-white py-20 opacity-0 peer-checked:opacity-100 md:relative md:h-auto md:bg-transparent md:py-0 md:opacity-100"
+    >
+      <div
+        class="flex w-full flex-col items-center overflow-hidden text-center text-2xl font-light md:flex-row md:justify-end md:gap-8 md:overflow-visible md:text-left md:text-[18px]"
+      >
+        <Link
+          class="underlined w-full translate-x-full p-6 text-center opacity-0 after:content-none md:w-auto md:transform-none md:p-0 md:opacity-100 md:transition-none md:after:content-[''] peer-checked:[.group_&]:translate-x-0 peer-checked:[.group_&]:opacity-100 peer-checked:[.group_&]:!delay-[0.7s]"
+          href="/blog/"
+        >
+          blog
+        </Link>
+        <Link
+          class="underlined w-full translate-x-full p-6 text-center opacity-0 !delay-[0.1s] after:content-none md:w-auto md:transform-none md:p-0 md:opacity-100 md:transition-none md:after:content-normal md:after:content-[''] peer-checked:[.group_&]:translate-x-0 peer-checked:[.group_&]:opacity-100 peer-checked:[.group_&]:!delay-[0.8s]"
+          href="/projects/"
+        >
+          projects
+        </Link>
+        <Link
+          class="underlined w-full translate-x-full p-6 text-center opacity-0 !delay-[0.2s] after:content-none md:w-auto md:transform-none md:p-0 md:opacity-100 md:transition-none md:after:content-normal md:after:content-[''] peer-checked:[.group_&]:translate-x-0 peer-checked:[.group_&]:opacity-100 peer-checked:[.group_&]:!delay-[0.9s]"
+          href="/goodies/"
+        >
+          goodies
+        </Link>
+        <Link
+          class="underlined w-full translate-x-full p-6 text-center opacity-0 !delay-[0.3s] after:content-none md:w-auto md:transform-none md:p-0 md:opacity-100 md:transition-none md:after:content-normal md:after:content-[''] peer-checked:[.group_&]:translate-x-0 peer-checked:[.group_&]:opacity-100 peer-checked:[.group_&]:!delay-[1s]"
+          href="/guestbook/"
+        >
+          guestbook
+        </Link>
+      </div>
+    </div>
+
+    <div class="group flex flex-row gap-5">
+      <label
+        for="menu-helper"
+        id="hamburger"
+        class="group/button text-indigio-800 z-[11] block h-8 w-8 cursor-pointer md:hidden"
+        aria-label="menu"
+        aria-controls="mobile-menu"
+        aria-haspopup="true"
+      >
+        <span class="m-auto mt-[12px] flex w-6 flex-col items-end">
+          <span
+            class="block h-[3px] w-6 translate-y-[-4px] rounded bg-current transition-all duration-500 peer-checked:[.group_&]:translate-y-[3px] peer-checked:[.group_&]:rotate-45"
+          ></span>
+          <span
+            class="duration-250 block h-[3px] w-6 rounded bg-current transition-all peer-checked:[.group_&]:bg-transparent"
+          ></span>
+          <span
+            class="group/button-hover:w-full block h-[3px] w-4 translate-y-[4px] rounded bg-current transition-all duration-500 peer-checked:[.group_&]:w-full peer-checked:[.group_&]:-translate-y-[3px] peer-checked:[.group_&]:-rotate-45"
+          ></span>
+        </span>
+      </label>
+    </div>
+  </nav>
+</header>
+
+<style>
+  #menu-helper:checked ~ #mobile-menu {
+    clip-path: circle(100% at center);
+
+    & a {
+      transition: opacity 0.4s ease-in-out 1s,
+        transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+    }
+  }
+
+  #mobile-menu {
+    transition: opacity 0.8s 0.25s, clip-path 1s 0.25s;
+    clip-path: circle(5px at top right);
+
+    @media screen(md) {
+      transition: none;
+      clip-path: none;
+    }
+
+    & a {
+      transition: opacity 0.6s ease-in-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  }
+</style>
+
+<script>
+  const menuHelperCheckbox = document.querySelector<HTMLInputElement>('menu-helper');
+  menuHelperCheckbox?.addEventListener('change', event => {
+    if ((event.target as HTMLInputElement | null)?.checked) {
+      delete document.body.dataset.menuOpen;
+    } else {
+      document.body.dataset.menuOpen = 'true';
+    }
+  });
+</script>

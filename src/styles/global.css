@@ -41,3 +41,19 @@
     @apply font-sans;
   }
 }
+
+@layer components {
+  .container {
+    @apply max-w-full px-4 sm:px-8 md:max-w-[1200px];
+  }
+
+  .underlined {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:block after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:transition-transform after:duration-[0.25s] after:ease-[ease] after:content-[''];
+  }
+  .active.underlined:after,
+  .underlined[aria-current='page']:after,
+  .underlined:focus:after,
+  .underlined:hover:after {
+    @apply scale-x-100 bg-current;
+  }
+}
