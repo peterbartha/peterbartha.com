@@ -52,7 +52,7 @@
 
 @layer components {
   .container {
-    @apply max-w-full px-4 sm:px-8 md:max-w-[1200px];
+    @apply mx-auto max-w-full px-4 sm:px-8 md:max-w-[1200px];
   }
 
   .underlined {
