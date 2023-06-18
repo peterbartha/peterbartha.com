@@ -64,4 +64,30 @@
   .underlined:hover:after {
     @apply scale-x-100 bg-current;
   }
+
+  .dot:is(h1, h2, h3, h4, h5, h6),
+  :is(h1, h2, h3, h4, h5, h6) > .dot {
+    @apply after:ml-1 after:inline-block after:self-baseline after:text-mint after:content-['.'];
+  }
+
+  .line-in:is(h1, h2, h3, h4, h5, h6) {
+    @apply relative mb-16 before:absolute before:-bottom-8 before:left-0 before:h-[3px] before:w-24 before:origin-[left_center] before:animate-underline before:bg-mint before:content-[''];
+  }
+}
+
+@layer utilities {
+  @responsive {
+    .anim-delay-300 {
+      animation-delay: 0.3s;
+    }
+    .anim-delay-600 {
+      animation-delay: 0.6s;
+    }
+    .anim-delay-900 {
+      animation-delay: 0.9s;
+    }
+    .anim-delay-1200 {
+      animation-delay: 1.2s;
+    }
+  }
 }
