@@ -32,6 +32,14 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-white-ice: 172deg 74% 92%;
+    --color-bermuda: 164deg 61% 65%;
+    --color-mint: 178deg 62% 46%;
+    --color-indigo: 231deg 73% 22%;
+    --color-indigo-darker: 232deg 85% 15%;
+  }
+
   h1,
   h2,
   h3,

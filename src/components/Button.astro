@@ -20,8 +20,8 @@ const { size = 'normal', secondary = false, ...props } = Astro.props;
     'hover:after:delay-[0.4s] hover:after:duration-[0.05s] hover:after:ease-linear',
     size === 'small' ? 'h-[40px] text-normal px-6' : 'h-[60px] text-lg px-10',
     secondary
-      ? 'bg-transparent border border-bermuda-300 hover:transition-[border-color] hover:delay-[0.15s] hover:duration-[0.3s] hover:ease-linear hover:border-indigo-800'
-      : 'bg-bermuda-300',
+      ? 'bg-transparent border border-bermuda hover:transition-[border-color] hover:delay-[0.15s] hover:duration-[0.3s] hover:ease-linear hover:border-indigo-800'
+      : 'bg-bermuda',
   ]}
   {...props}
 >
