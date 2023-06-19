@@ -1,0 +1,45 @@
+---
+import Button from './Button.astro';
+import portraitImage from '../assets/peter-bartha.png';
+import { Picture } from '@astrojs/image/components';
+---
+
+<section
+  class="container flex h-[calc(100vh-82px)] flex-col-reverse items-center gap-12 md:flex-row md:gap-16 md:pb-[82px] lg:gap-32"
+>
+  <div class="flex-1">
+    <h1 class="line-in flex animate-reveal flex-col font-sans">
+      <span class="mb-2 text-3xl md:text-2xl lg:text-4xl">Hi, my name is</span>
+      <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl">Peter Bartha</span>
+    </h1>
+    <p class="anim-delay-600 mb-8 animate-reveal">
+      I'm a software engineer specializing in building and architecting great digital experiences.
+    </p>
+    <Button href="/blog/" class="anim-delay-900 animate-reveal">Read my blog</Button>
+  </div>
+  <div class="relative mt-4 aspect-square w-[70%] flex-none md:mt-0 md:w-full md:flex-1">
+    <div
+      class="masked-blob absolute aspect-square w-full -translate-x-8 -translate-y-6 scale-110 bg-[url('../assets/wave.svg')] bg-[length:40px] bg-repeat"
+    >
+    </div>
+    <div class="absolute aspect-square w-full bg-[url('../assets/blob.svg')] bg-no-repeat"></div>
+    <Picture
+      class="masked-portrait relative aspect-square"
+      src={portraitImage}
+      widths={[200, 400, 800]}
+      sizes="(max-width: 800px) 100vw, 800px"
+      aspectRatio="1:1"
+      alt="Portrait of Peter Bartha"
+    />
+  </div>
+</section>
+
+<style>
+  .masked-blob {
+    mask: url('../assets/blob.svg');
+  }
+
+  .masked-portrait {
+    mask: url('../assets/hero.svg');
+  }
+</style>

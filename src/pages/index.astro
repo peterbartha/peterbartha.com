@@ -1,5 +1,5 @@
 ---
-import Button from '@components/Button.astro';
+import Hero from '@components/Hero.astro';
 import type { Metadata } from '@components/SeoMeta.astro';
 import { author } from '@data/author';
 import BaseLayout from '@layouts/BaseLayout.astro';
@@ -11,17 +11,5 @@ const meta: Metadata = {
 ---
 
 <BaseLayout {meta}>
-  <section class="container grid h-[calc(100vh-82px)] items-center pb-[82px] lg:grid-cols-2">
-    <div>
-      <h1 class="line-in flex animate-reveal flex-col font-sans">
-        <span class="mb-2 text-4xl">Hi, my name is</span>
-        <span class="dot text-7xl font-bold">Peter Bartha</span>
-      </h1>
-      <p class="anim-delay-600 mb-8 animate-reveal">
-        I'm a software engineer specializing in building and architecting great digital experiences.
-      </p>
-      <Button href="/blog/" class="anim-delay-900 animate-reveal">Read my blog</Button>
-    </div>
-    <div></div>
-  </section>
+  <Hero />
 </BaseLayout>
