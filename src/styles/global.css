@@ -38,6 +38,8 @@
     --color-mint: 178deg 62% 46%;
     --color-indigo: 231deg 73% 22%;
     --color-indigo-darker: 232deg 85% 15%;
+
+    --layout-container-max-width: 1200px;
   }
 
   h1,
@@ -52,7 +54,7 @@
 
 @layer components {
   .container {
-    @apply mx-auto max-w-full px-4 sm:px-8 md:max-w-[1200px];
+    @apply mx-auto max-w-full px-4 sm:px-8 md:max-w-[var(--layout-container-max-width)];
   }
 
   .underlined {
