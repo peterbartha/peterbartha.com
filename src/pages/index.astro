@@ -1,4 +1,6 @@
 ---
+import aboutMeImage from '@assets/about-me.png';
+import { Picture } from '@astrojs/image/components';
 import Hero from '@components/Hero.astro';
 import type { Metadata } from '@components/SeoMeta.astro';
 import { author } from '@data/author';
@@ -12,4 +14,38 @@ const meta: Metadata = {
 
 <BaseLayout {meta}>
   <Hero />
+  <section class="h-[calc(100vh-82px)] items-center">
+    <div class="flex flex-col-reverse lg:grid lg:grid-cols-2">
+      <div class="bg-bermuda lg:w-[calc(100%+64px)] lg:bg-transparent">
+        <Picture
+          class="h-full w-full rounded-t-2xl object-cover lg:rounded-r-2xl"
+          src={aboutMeImage}
+          widths={[200, 400, 800]}
+          sizes="(max-width: 800px) 100vw, 800px"
+          aspectRatio="20:15"
+          alt="Hiking tour in Tenerife"
+        />
+      </div>
+      <div class="bg-bermuda py-16 lg:translate-y-8 lg:rounded-l-2xl">
+        <div class="px-4 sm:px-8 lg:max-w-[calc(var(--layout-container-max-width)/2)] lg:px-16">
+          <h1 class="line-in flex animate-reveal flex-col font-sans">
+            <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl">About me</span>
+          </h1>
+          <p class="anim-delay-600 mb-8 animate-reveal">
+            I'm a full-stack developer based in Budapest, Hungary, and I'm passionate about building
+            digital services and creating innovative solutions.
+          </p>
+          <p class="anim-delay-600 mb-8 animate-reveal">
+            Frontend development holds a special place in my heart, and I'm constantly motivated to
+            expand my knowledge in this exciting field. I enjoy learning something new and getting
+            feedback to make myself better and grow.
+          </p>
+          <p class="anim-delay-600 mb-0 animate-reveal">
+            When I'm not online, I enjoy spending quality time with my family and friends, engaging
+            in various board games that challenge my strategic thinking.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
