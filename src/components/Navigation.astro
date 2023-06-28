@@ -21,7 +21,12 @@ import Link from './Link.astro';
       <span class="px-3">Peter Bartha</span>
     </a>
 
-    <input type="checkbox" id="menu-helper" class="peer absolute h-[1px] w-[1px] opacity-0" />
+    <input
+      type="checkbox"
+      id="menu-helper"
+      class="peer absolute h-[1px] w-[1px] opacity-0"
+      aria-labelledby="hamburger"
+    />
     <div
       id="mobile-menu"
       class="closed group fixed inset-0 z-10 flex h-screen flex-1 items-center justify-end bg-white py-20 opacity-0 peer-checked:opacity-100 md:relative md:h-auto md:bg-transparent md:py-0 md:opacity-100"
@@ -61,7 +66,7 @@ import Link from './Link.astro';
         for="menu-helper"
         id="hamburger"
         class="group/button text-indigio-800 z-[11] block h-8 w-8 cursor-pointer md:hidden"
-        aria-label="menu"
+        aria-label="Open menu"
         aria-controls="mobile-menu"
         aria-haspopup="true"
       >
