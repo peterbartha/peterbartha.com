@@ -2,6 +2,7 @@
 import aboutMeImage from '@assets/about-me.png';
 import { Picture } from '@astrojs/image/components';
 import Hero from '@components/Hero.astro';
+import Icon from '@components/Icon.astro';
 import type { Metadata } from '@components/SeoMeta.astro';
 import { author } from '@data/author';
 import BaseLayout from '@layouts/BaseLayout.astro';
@@ -123,6 +124,120 @@ const meta: Metadata = {
             shares, and mentorship.
           </li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container flex items-center py-16 sm:min-h-screen">
+      <div>
+        <h1 class="line-in flex animate-reveal flex-col font-sans">
+          <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl"
+            >Technologies</span
+          >
+        </h1>
+        <p>
+          I love exploring new libraries, programing languages and frameworks. Here is a list of
+          technologies that I have worked with at school, side projects and open source.
+        </p>
+        <div class="flex sm:gap-16 md:gap-32 lg:gap-48">
+          <div class="flex w-full flex-col sm:w-auto sm:flex-none">
+            <h2 class="mb-8 mt-16 font-serif font-medium">Favourite tech stack:</h2>
+            <ul
+              class="grid flex-1 grid-cols-2 place-items-center gap-8 sm:place-items-stretch sm:gap-x-16 lg:gap-x-24"
+            >
+              <li class="flex w-[80px] flex-col items-center">
+                <Icon name="svelte-logo" aria-label="Svelte's logo" class="aspect-square" /><span
+                  class="font-mono text-sm">Svelte</span
+                >
+              </li>
+              <li class="flex w-[80px] flex-col items-center">
+                <Icon name="typescript-logo" aria-label="Typescript's logo" class="aspect-square" />
+                <span class="font-mono text-sm">Typescript</span>
+              </li>
+              <li class="flex w-[80px] flex-col items-center self-end">
+                <Icon name="deno-logo" aria-label="Deno's logo" class="aspect-square" /><span
+                  class="font-mono text-sm">Deno</span
+                >
+              </li>
+              <li class="flex w-[80px] flex-col items-center self-end">
+                <Icon name="rust-logo" aria-label="Rust's logo" class="aspect-square" /><span
+                  class="font-mono text-sm">Rust</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="hidden flex-1 sm:block">
+            <h2 class="mb-8 mt-16 font-serif font-medium">... and also love to work with:</h2>
+            <ul class="grid grid-cols-4 gap-8">
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="astro-logo" aria-label="Astro's logo" class="aspect-square" /><span
+                  class="mt-2 font-mono text-sm">Astro</span
+                >
+              </li>
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="angular-logo" aria-label="Angular's logo" class="aspect-square" /><span
+                  class="mt-2 font-mono text-sm">Angular</span
+                >
+              </li>
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="react-logo" aria-label="React's logo" class="aspect-square" /><span
+                  class="mt-2 font-mono text-sm">React</span
+                >
+              </li>
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="javascript-logo" aria-label="Javascript's logo" class="aspect-square" />
+                <span class="mt-2 font-mono text-sm">Javascript</span>
+              </li>
+
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="html5-logo" aria-label="HTML5's logo" class="aspect-square" /><span
+                  class="mt-2 font-mono text-sm">HTML5</span
+                >
+              </li>
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="css-logo" aria-label="CSS's logo" class="aspect-square" /><span
+                  class="mt-2 font-mono text-sm">CSS</span
+                >
+              </li>
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="nodejs-logo" aria-label="Nodejs's logo" class="aspect-square" /><span
+                  class="mt-2 font-mono text-sm">Nodejs</span
+                >
+              </li>
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="bunjs-logo" aria-label="Bunjs's logo" class="aspect-square" /><span
+                  class="mt-2 font-mono text-sm">Bunjs</span
+                >
+              </li>
+
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon
+                  name="tailwind-logo"
+                  aria-label="Tailwind's logo"
+                  class="aspect-square"
+                /><span class="mt-2 font-mono text-sm">Tailwind</span>
+              </li>
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="figma-logo" aria-label="Figma's logo" class="aspect-square" /><span
+                  class="mt-2 font-mono text-sm">Figma</span
+                >
+              </li>
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon
+                  name="playwright-logo"
+                  aria-label="Playwright's logo"
+                  class="aspect-square"
+                /><span class="mt-2 font-mono text-sm">Playwright</span>
+              </li>
+              <li class="flex w-[40px] flex-col items-center">
+                <Icon name="python-logo" aria-label="Python's logo" class="aspect-square" /><span
+                  class="mt-2 font-mono text-sm">Python</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
