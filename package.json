@@ -28,6 +28,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "husky": "^8.0.3",
     "nano-staged": "^0.8.0",
+    "node-html-parser": "^6.1.5",
     "postcss-csso": "^6.0.1",
     "postcss-nesting": "^11.2.2",
     "prettier": "^2.8.8",

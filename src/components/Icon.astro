@@ -1,0 +1,37 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { parse } from 'node-html-parser';
+
+export interface Props extends HTMLAttributes<'svg'> {
+  name: string;
+}
+
+const parseSvg = async (name: string) => {
+  const searchPath = `/src/assets/icons/${name}.svg`;
+  const svgModules = import.meta.glob<string>('/src/assets/icons/*.svg', { as: 'raw' });
+
+  const module = svgModules[searchPath];
+  if (!module) {
+    throw new Error(`${searchPath} not found`);
+  }
+
+  const root = parse(await module());
+  const svg = root.querySelector('svg');
+  if (!svg) {
+    throw new Error(`${searchPath} is empty, ${root.tagName}`);
+  }
+  const { attributes, innerHTML } = svg;
+
+  return {
+    attributes,
+    innerHTML,
+  };
+};
+
+const { name, ...attributes } = Astro.props as Props;
+const { attributes: baseAttributes, innerHTML } = await parseSvg(name);
+
+const svgAttributes = { ...baseAttributes, ...attributes };
+---
+
+<svg {...svgAttributes} set:html={innerHTML} />
