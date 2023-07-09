@@ -26,8 +26,8 @@ import { Picture } from '@astrojs/image/components';
     <Picture
       class="masked-portrait relative aspect-square"
       src={portraitImage}
-      widths={[200, 400, 800]}
-      sizes="(max-width: 800px) 100vw, 800px"
+      widths={[400, 800, 1000]}
+      sizes="(min-width: 768px) 50vw, 100vw"
       aspectRatio="1:1"
       alt="Portrait of Peter Bartha"
     />

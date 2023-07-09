@@ -14,19 +14,20 @@ const meta: Metadata = {
 
 <BaseLayout {meta}>
   <Hero />
+
   <section class="flex min-h-[calc(100vh-82px)] items-center">
-    <div class="flex flex-col-reverse lg:grid lg:grid-cols-2">
+    <div class="flex w-full flex-col-reverse lg:grid lg:grid-cols-2">
       <div class="bg-bermuda lg:w-[calc(100%+64px)] lg:bg-transparent">
         <Picture
           class="h-full w-full rounded-t-2xl object-cover lg:rounded-r-2xl"
           src={aboutMeImage}
-          widths={[200, 400, 800]}
-          sizes="(max-width: 800px) 100vw, 800px"
+          widths={[800, 1200, 1600]}
+          sizes="(min-width: 1024px) 60vw, 100vw"
           aspectRatio="20:15"
           alt="Hiking tour in Tenerife"
         />
       </div>
-      <div class="bg-bermuda py-16 lg:translate-y-8 lg:rounded-l-2xl">
+      <div class="flex items-center bg-bermuda py-16 lg:translate-y-8 lg:rounded-l-2xl">
         <div class="px-4 sm:px-8 lg:max-w-[calc(var(--layout-container-max-width)/2)] lg:px-16">
           <h1 class="line-in flex animate-reveal flex-col font-sans">
             <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl">About me</span>
@@ -48,6 +49,7 @@ const meta: Metadata = {
       </div>
     </div>
   </section>
+
   <section
     class="asd relative flex min-h-screen items-center before:absolute before:left-1/2 before:top-1/2 before:z-[-1] before:aspect-[10/14] before:w-full before:-translate-x-1/2 before:-translate-y-1/2 before:bg-[url('../assets/logo-bg.svg')] before:bg-cover before:bg-no-repeat before:content-[''] lg:before:-translate-y-1/3"
   >
