@@ -1,6 +1,7 @@
 ---
 import aboutMeImage from '@assets/about-me.png';
 import { Picture } from '@astrojs/image/components';
+import Button from '@components/Button.astro';
 import Hero from '@components/Hero.astro';
 import Icon from '@components/Icon.astro';
 import type { Metadata } from '@components/SeoMeta.astro';
@@ -334,6 +335,24 @@ const meta: Metadata = {
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="mt-16 grid min-h-screen grid-rows-2 sm:grid-cols-2 sm:grid-rows-none md:mt-32">
+    <div
+      class="flex flex-col items-center justify-center bg-indigo-800 px-4 text-center text-white sm:px-8 lg:px-16"
+    >
+      <h2 class="line-in centered flex animate-reveal flex-col font-sans">
+        <span class="dot text-3xl font-bold">I craft and design stuff</span>
+      </h2>
+      <p>Open source projects, web apps and experiments.</p>
+      <Button href="/projects/" class="anim-delay-900 mt-8 animate-reveal">See my projects</Button>
+    </div>
+    <div class="flex flex-col items-center justify-center px-4 text-center sm:px-8 lg:px-16">
+      <h2 class="line-in centered flex animate-reveal flex-col font-sans">
+        <span class="dot text-3xl font-bold">I write, <em>sometimes</em></span>
+      </h2><p>About software engineering, frontend dev and learning.</p>
+      <Button href="/blog/" class="anim-delay-900 mt-8 animate-reveal">Read my blog</Button>
     </div>
   </section>
 </BaseLayout>
