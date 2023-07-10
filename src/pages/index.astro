@@ -20,7 +20,7 @@ const meta: Metadata = {
     <div class="flex w-full flex-col-reverse lg:grid lg:grid-cols-2">
       <div class="bg-bermuda lg:w-[calc(100%+64px)] lg:bg-transparent">
         <Picture
-          class="h-full w-full rounded-t-2xl object-cover lg:rounded-r-2xl"
+          class="shadow-default h-full w-full rounded-t-2xl object-cover lg:rounded-r-2xl"
           src={aboutMeImage}
           widths={[800, 1200, 1600]}
           sizes="(min-width: 1024px) 60vw, 100vw"
@@ -28,7 +28,9 @@ const meta: Metadata = {
           alt="Hiking tour in Tenerife"
         />
       </div>
-      <div class="flex items-center bg-bermuda py-16 lg:translate-y-8 lg:rounded-l-2xl">
+      <div
+        class="shadow-default flex items-center bg-bermuda py-16 lg:translate-y-8 lg:rounded-l-2xl"
+      >
         <div class="px-4 sm:px-8 lg:max-w-[calc(var(--layout-container-max-width)/2)] lg:px-16">
           <h1 class="line-in flex animate-reveal flex-col font-sans">
             <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl">About me</span>
@@ -86,157 +88,249 @@ const meta: Metadata = {
 
   <section class="container flex min-h-screen items-center">
     <div>
-      <h1 class="line-in flex animate-reveal flex-col font-sans">
-        <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl">Experience</span>
-      </h1>
-      <div>
-        <h2 class="font-serif font-semibold">
-          Lead Engineer <span class="text-mint">@ Tresorit</span>
-        </h2>
-        <p class="font-mono text-sm">May 2013 - Present</p>
-        <p class="mt-4">
-          Over the past decade, I have had the opportunity to develop Tresorit's end-to-end
-          encrypted cloud storage service. During this time, I have learned a lot about web
-          technologies — especially in the field of cryptography — and have had the privilege of
-          working alongside many talented engineers and creative people. My main responsibilities
-          include the following tasks:
-        </p>
-        <ul class="mt-4 flex flex-col gap-4">
-          <li class="arrow-list">
-            Deliver high-quality, cryptographically secure and robust production code, while working
-            with a broad array of innovation challenges, across various industries, typically in the
-            Business-to-Business space,
-          </li>
-          <li class="arrow-list">
-            Work alongside creative directors to lead the research, development, and architecture of
-            technical solutions to fulfill business requirements,
-          </li>
-          <li class="arrow-list">
-            Assess user needs by contacting them to gain a comprehensive understanding of their
-            needs,
-          </li>
-          <li class="arrow-list">
-            Collaborate with researchers, designers, project managers, and other engineers to
-            transform creative concepts into production realities for clients and stakeholders,
-          </li>
-          <li class="arrow-list">
-            Provide leadership within engineering department through close collaboration, knowledge
-            shares, and mentorship.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container flex items-center py-16 sm:min-h-screen">
       <div>
         <h1 class="line-in flex animate-reveal flex-col font-sans">
-          <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl"
-            >Technologies</span
-          >
+          <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl">Experience</span>
         </h1>
-        <p>
-          I enjoy discovering new libraries, programming languages, and frameworks. Below is a list
-          of technologies I have worked with throughout my professional career, side projects, and
-          open source contributions.
-        </p>
-        <div class="flex sm:gap-16 md:gap-32 lg:gap-48">
-          <div class="flex w-full flex-col sm:w-auto sm:flex-none">
-            <h2 class="mb-8 mt-16 font-serif font-medium">Favourite tech stack:</h2>
-            <ul
-              class="grid flex-1 grid-cols-2 place-items-center gap-8 sm:place-items-stretch sm:gap-x-16 lg:gap-x-24"
-            >
-              <li class="flex w-[80px] flex-col items-center">
-                <Icon name="svelte-logo" aria-label="Svelte's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">Svelte</span
-                >
-              </li>
-              <li class="flex w-[80px] flex-col items-center">
-                <Icon name="typescript-logo" aria-label="Typescript's logo" class="aspect-square" />
-                <span class="mt-2 font-mono text-sm">Typescript</span>
-              </li>
-              <li class="flex w-[80px] flex-col items-center self-end">
-                <Icon name="deno-logo" aria-label="Deno's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">Deno</span
-                >
-              </li>
-              <li class="flex w-[80px] flex-col items-center self-end">
-                <Icon name="rust-logo" aria-label="Rust's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">Rust</span
-                >
-              </li>
-            </ul>
+        <div>
+          <h2 class="font-serif font-semibold">
+            Lead Engineer <span class="text-mint">@ Tresorit</span>
+          </h2>
+          <p class="font-mono text-sm">May 2013 - Present</p>
+          <p class="mt-4">
+            Over the past decade, I have had the opportunity to develop Tresorit's end-to-end
+            encrypted cloud storage service. During this time, I have learned a lot about web
+            technologies — especially in the field of cryptography — and have had the privilege of
+            working alongside many talented engineers and creative people. My main responsibilities
+            include the following tasks:
+          </p>
+          <ul class="mt-4 flex flex-col gap-4">
+            <li class="arrow-list">
+              Deliver high-quality, cryptographically secure and robust production code, while
+              working with a broad array of innovation challenges, across various industries,
+              typically in the Business-to-Business space,
+            </li>
+            <li class="arrow-list">
+              Work alongside creative directors to lead the research, development, and architecture
+              of technical solutions to fulfill business requirements,
+            </li>
+            <li class="arrow-list">
+              Assess user needs by contacting them to gain a comprehensive understanding of their
+              needs,
+            </li>
+            <li class="arrow-list">
+              Collaborate with researchers, designers, project managers, and other engineers to
+              transform creative concepts into production realities for clients and stakeholders,
+            </li>
+            <li class="arrow-list">
+              Provide leadership within engineering department through close collaboration,
+              knowledge shares, and mentorship.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="md:shadow-default mt-8 w-full rounded-2xl md:mt-32">
+        <div
+          class="z-1 relative flex h-full flex-col justify-between rounded-2xl md:flex-row md:bg-bermuda"
+        >
+          <div class="flex flex-1 flex-col justify-center py-8 md:w-[40%] md:p-8 lg:w-1/2 lg:p-16">
+            <h2 class="line-in flex animate-reveal flex-col font-sans">
+              <span class="dot text-3xl font-bold">Technologies</span>
+            </h2>
+            <p>
+              I enjoy discovering new libraries, programming languages, and frameworks. See the
+              palette of technologies I have worked with throughout my professional career, side
+              projects, and open source contributions.
+            </p>
           </div>
-          <div class="hidden flex-1 sm:block">
-            <h2 class="mb-8 mt-16 font-serif font-medium">... and also love to work with:</h2>
-            <ul class="grid grid-cols-4 gap-8">
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="astro-logo" aria-label="Astro's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">Astro</span
-                >
-              </li>
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="angular-logo" aria-label="Angular's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">Angular</span
-                >
-              </li>
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="react-logo" aria-label="React's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">React</span
-                >
-              </li>
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="javascript-logo" aria-label="Javascript's logo" class="aspect-square" />
-                <span class="mt-2 font-mono text-sm">Javascript</span>
-              </li>
 
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="html5-logo" aria-label="HTML5's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">HTML5</span
+          <div
+            class="shadow-default overflow-hidden rounded-2xl bg-bermuda md:w-[60%] md:rounded-l-none md:rounded-r-2xl md:bg-none md:shadow-none lg:w-1/2"
+          >
+            <div
+              class="relative -top-[180px] right-8 flex max-h-[480px] flex-wrap md:-right-1 md:p-8"
+              style="transform: rotate(-15deg) translateZ(10px);"
+            >
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 75ms"
                 >
-              </li>
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="css-logo" aria-label="CSS's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">CSS</span
+                  <Icon
+                    name="html5-logo"
+                    aria-label="HTML5's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">HTML5</span>
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 150ms"
                 >
-              </li>
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="nodejs-logo" aria-label="Nodejs's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">Nodejs</span
+                  <Icon name="css-logo" aria-label="CSS's logo" class="aspect-square w-16" /><span
+                    class="mt-2 font-mono text-sm">CSS</span
+                  >
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 225ms"
                 >
-              </li>
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="bunjs-logo" aria-label="Bunjs's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">Bunjs</span
-                >
-              </li>
+                  <Icon
+                    name="tailwind-logo"
+                    aria-label="Tailwind's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">Tailwind</span>
+                </div>
+              </div>
 
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon
-                  name="tailwind-logo"
-                  aria-label="Tailwind's logo"
-                  class="aspect-square"
-                /><span class="mt-2 font-mono text-sm">Tailwind</span>
-              </li>
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="figma-logo" aria-label="Figma's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">Figma</span
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 300ms"
                 >
-              </li>
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon
-                  name="playwright-logo"
-                  aria-label="Playwright's logo"
-                  class="aspect-square"
-                /><span class="mt-2 font-mono text-sm">Playwright</span>
-              </li>
-              <li class="flex w-[40px] flex-col items-center">
-                <Icon name="python-logo" aria-label="Python's logo" class="aspect-square" /><span
-                  class="mt-2 font-mono text-sm">Python</span
+                  <Icon
+                    name="svelte-logo"
+                    aria-label="Svelte's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">Svelte</span>
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 375ms"
                 >
-              </li>
-            </ul>
+                  <Icon
+                    name="astro-logo"
+                    aria-label="Astro's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">Astro</span>
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 450ms"
+                >
+                  <Icon
+                    name="angular-logo"
+                    aria-label="Angular's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">Angular</span>
+                </div>
+              </div>
+
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 525ms"
+                >
+                  <Icon
+                    name="react-logo"
+                    aria-label="React's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">React</span>
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 600ms"
+                >
+                  <Icon
+                    name="typescript-logo"
+                    aria-label="TypeScript's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">TypeScript</span>
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 675ms"
+                >
+                  <Icon
+                    name="javascript-logo"
+                    aria-label="JavaScript's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">JavaScript</span>
+                </div>
+              </div>
+
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 750ms"
+                >
+                  <Icon name="rust-logo" aria-label="Rust's logo" class="aspect-square w-16" /><span
+                    class="mt-2 font-mono text-sm">Rust</span
+                  >
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 825ms"
+                >
+                  <Icon name="deno-logo" aria-label="Deno's logo" class="aspect-square w-16" /><span
+                    class="mt-2 font-mono text-sm">Deno</span
+                  >
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 900ms"
+                >
+                  <Icon
+                    name="nodejs-logo"
+                    aria-label="Node.js's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">Node.js</span>
+                </div>
+              </div>
+
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 975ms"
+                >
+                  <Icon
+                    name="playwright-logo"
+                    aria-label="Playwright's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">Playwright</span>
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 1050ms"
+                >
+                  <Icon
+                    name="python-logo"
+                    aria-label="Python's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">Python</span>
+                </div>
+              </div>
+              <div class="w-1/3">
+                <div
+                  class="shadow-default m-2 flex animate-bubble flex-col items-center rounded-xl border border-mint bg-white-ice p-6"
+                  style="animation-delay: 1125ms"
+                >
+                  <Icon
+                    name="figma-logo"
+                    aria-label="Figma's logo"
+                    class="aspect-square w-16"
+                  /><span class="mt-2 font-mono text-sm">Figma</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

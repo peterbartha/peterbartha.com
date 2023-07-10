@@ -28,6 +28,9 @@ module.exports = {
         reveal: {
           '0%': { opacity: 0, transform: 'translateY(10px)' },
         },
+        bubble: {
+          '0%': { opacity: 0, transform: 'scale(0.96) translateY(24px)' },
+        },
         underline: {
           '0%': { opacity: 0, transform: 'translateX(500%) scaleX(7)' },
           '1%': { opacity: 1 },
@@ -37,6 +40,7 @@ module.exports = {
       },
       animation: {
         reveal: 'reveal .8s cubic-bezier(.22,.61,.36,1) .3s backwards',
+        bubble: 'bubble .8s cubic-bezier(.16,1,.3,1) .3s backwards',
         underline: 'underline 1s cubic-bezier(0.25,0.1,0.5,1.27) 0.3s both',
       },
     },

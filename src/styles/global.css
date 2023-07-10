@@ -79,6 +79,10 @@
   .arrow-list {
     @apply relative pl-8 before:absolute before:left-0 before:top-[3px] before:block before:h-6 before:w-6 before:rounded-full before:bg-[url('../assets/icons/arrow-long-right.svg')] before:bg-no-repeat before:fill-indigo-800 before:content-[''];
   }
+
+  .shadow-default {
+    @apply shadow-[0_2.75px_2.21px_rgba(0,0,0,0.07),0_6.65px_5.32px_rgba(0,0,0,0.043),0_12.5px_10px_rgba(0,0,0,0.03),0_22px_18px_rgba(0,0,0,0.03),0_42px_33.4px_rgba(0,0,0,0.02),0_100px_80px_rgba(0,0,0,0.017)];
+  }
 }
 
 @layer utilities {
