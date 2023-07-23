@@ -4,6 +4,7 @@ import { Picture } from '@astrojs/image/components';
 import Button from '@components/Button.astro';
 import Hero from '@components/Hero.astro';
 import Icon from '@components/Icon.astro';
+import Link from '@components/Link.astro';
 import type { Metadata } from '@components/SeoMeta.astro';
 import { author } from '@data/author';
 import BaseLayout from '@layouts/BaseLayout.astro';
@@ -354,5 +355,106 @@ const meta: Metadata = {
       </h2><p>About software engineering, frontend dev and learning.</p>
       <Button href="/blog/" class="anim-delay-900 mt-8 animate-reveal">Read my blog</Button>
     </div>
+  </section>
+
+  <section class="container flex min-h-screen items-center">
+    <section class="grid grid-rows-2 items-center sm:grid-cols-2 sm:grid-rows-none">
+      <div>
+        <h1 class="line-in flex animate-reveal flex-col font-sans">
+          <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl"
+            >Get in touch</span
+          >
+        </h1>
+        <p>
+          Although I'm not actively seeking new opportunities at the moment, I’m always up for a
+          chat. Pop me an <Link href="mailto:peterbartha@pm.me" target="_blank">email</Link>, give
+          me a shout on <Link href="https://twitter.com/pbartha7" target="_blank">
+            social media
+          </Link> or just 👋 and write me a few friendly lines in the
+          <Link href="/guestbook/">guestbook</Link>.
+        </p>
+
+        <div class="mt-8">
+          <Button href="mailto:peterbartha@pm.me" class="anim-delay-900 animate-reveal">
+            Say hello
+          </Button>
+          <Button href="/guestbook/" class="anim-delay-900 ml-4 animate-reveal" secondary>
+            Guestbook
+          </Button>
+        </div>
+      </div>
+      <div class="overflow-hidden">
+        <div class="relative ml-auto mr-auto aspect-square w-[300px] md:mr-0 md:w-[400px]">
+          <div
+            class="anim-delay-300 anim-duration-3 absolute top-[14%] h-2 w-32 animate-swish bg-white opacity-0"
+          >
+          </div>
+          <div
+            class="anim-delay-600 anim-duration-1 absolute top-[25%] h-2 w-12 animate-swish bg-white opacity-0"
+          >
+          </div>
+          <div
+            class="anim-delay-1500 anim-duration-3 absolute top-[40%] h-2 w-20 animate-swish bg-white opacity-0"
+          >
+          </div>
+          <div
+            class="anim-delay-900 anim-duration-2 absolute top-[48%] h-2 w-20 animate-swish bg-white opacity-0"
+          >
+          </div>
+          <div
+            class="anim-delay-300 anim-duration-3 h12 absolute top-[60%] w-8 animate-swish bg-white opacity-0"
+          >
+          </div>
+          <div
+            class="anim-delay-1500 anim-duration-2 absolute top-[75%] h-2 w-24 animate-swish bg-white opacity-0"
+          >
+          </div>
+          <div
+            class="anim-delay-900 anim-duration-3 absolute top-[87%] h-2 w-32 animate-swish bg-white opacity-0"
+          >
+          </div>
+          <Link
+            href="mailto:peterbartha@pm.me"
+            target="_blank"
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            custom
+          >
+            <Icon name="email" class="w-[120px] md:w-[200px]" />
+          </Link>
+          <Link
+            href="https://twitter.com/pbartha7"
+            target="_blank"
+            class="anim-delay-900 absolute left-[5%] top-[20%] animate-wobble"
+            custom
+          >
+            <Icon name="twitter-logo" width="48" />
+          </Link>
+          <Link
+            href="/rss.xml"
+            target="_blank"
+            class="absolute left-[75%] top-[10%] animate-wobble-reverse"
+            custom
+          >
+            <Icon name="rss-logo" width="48" />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/barthapeter/"
+            target="_blank"
+            class="absolute left-[7%] top-[80%] animate-wobble"
+            custom
+          >
+            <Icon name="linkedin-logo" width="48" />
+          </Link>
+          <Link
+            href="https://github.com/peterbartha"
+            target="_blank"
+            class="anim-delay-900 absolute left-[80%] top-[70%] animate-wobble-reverse"
+            custom
+          >
+            <Icon name="github-logo" width="48" />
+          </Link>
+        </div>
+      </div>
+    </section>
   </section>
 </BaseLayout>

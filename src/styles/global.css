@@ -103,5 +103,21 @@
     .anim-delay-1200 {
       animation-delay: 1.2s;
     }
+    .anim-delay-1500 {
+      animation-delay: 1.5s;
+    }
+    .anim-delay-1800 {
+      animation-delay: 1.8s;
+    }
+
+    .anim-duration-1 {
+      animation-duration: 1s;
+    }
+    .anim-duration-2 {
+      animation-duration: 2s;
+    }
+    .anim-duration-3 {
+      animation-duration: 3s;
+    }
   }
 }

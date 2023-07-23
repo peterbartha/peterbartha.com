@@ -37,31 +37,35 @@ import Link from './Link.astro';
         <Link
           class="underlined w-full translate-x-full p-6 text-center opacity-0 after:content-none md:w-auto md:transform-none md:p-0 md:opacity-100 md:transition-none md:after:content-[''] peer-checked:[.group_&]:translate-x-0 peer-checked:[.group_&]:opacity-100 peer-checked:[.group_&]:!delay-[0.7s]"
           href="/blog/"
+          custom
         >
           blog
         </Link>
         <Link
           class="underlined w-full translate-x-full p-6 text-center opacity-0 !delay-[0.1s] after:content-none md:w-auto md:transform-none md:p-0 md:opacity-100 md:transition-none md:after:content-normal md:after:content-[''] peer-checked:[.group_&]:translate-x-0 peer-checked:[.group_&]:opacity-100 peer-checked:[.group_&]:!delay-[0.8s]"
           href="/projects/"
+          custom
         >
           projects
         </Link>
         <Link
           class="underlined w-full translate-x-full p-6 text-center opacity-0 !delay-[0.2s] after:content-none md:w-auto md:transform-none md:p-0 md:opacity-100 md:transition-none md:after:content-normal md:after:content-[''] peer-checked:[.group_&]:translate-x-0 peer-checked:[.group_&]:opacity-100 peer-checked:[.group_&]:!delay-[0.9s]"
           href="/goodies/"
+          custom
         >
           goodies
         </Link>
         <Link
           class="underlined w-full translate-x-full p-6 text-center opacity-0 !delay-[0.3s] after:content-none md:w-auto md:transform-none md:p-0 md:opacity-100 md:transition-none md:after:content-normal md:after:content-[''] peer-checked:[.group_&]:translate-x-0 peer-checked:[.group_&]:opacity-100 peer-checked:[.group_&]:!delay-[1s]"
           href="/guestbook/"
+          custom
         >
           guestbook
         </Link>
       </div>
     </div>
 
-    <div class="group flex flex-row gap-5">
+    <div class="group flex flex-row gap-5 md:hidden">
       <label
         for="menu-helper"
         id="hamburger"
