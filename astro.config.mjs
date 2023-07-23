@@ -13,5 +13,6 @@ export default defineConfig({
     }),
   ],
   output: 'static',
+  compressHTML: true,
   adapter: vercelStatic(),
 });
