@@ -1,0 +1,139 @@
+---
+import Link from '@components/Link.astro';
+---
+
+<footer class="bg-indigo-800 text-white">
+  <div class="container flex flex-col gap-8 pt-12 sm:flex-row sm:pt-16">
+    <div class="flex-1">
+      <h1 class="text-3xl font-bold text-bermuda">Peter Bartha</h1>
+      <p>Lead Engineer at Tresorit</p>
+    </div>
+    <div class="flex flex-none flex-row justify-between gap-32 sm:mt-2 sm:justify-end">
+      <div>
+        <h2 class="font-serif font-medium uppercase text-bermuda">Site</h2>
+        <ul class="flex flex-col gap-2">
+          <li>
+            <Link
+              href="/blog/"
+              class="underlined w-full translate-x-full pb-1 opacity-0 after:content-none md:w-auto md:transform-none md:opacity-100 md:transition-none md:after:content-normal md:after:content-['']"
+              custom
+            >
+              blog
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/projects/"
+              class="underlined w-full translate-x-full pb-1 opacity-0 after:content-none md:w-auto md:transform-none md:opacity-100 md:transition-none md:after:content-normal md:after:content-['']"
+              custom
+            >
+              projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/goodies/"
+              class="underlined w-full translate-x-full pb-1 opacity-0 after:content-none md:w-auto md:transform-none md:opacity-100 md:transition-none md:after:content-normal md:after:content-['']"
+              custom
+            >
+              goodies
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/uses/"
+              class="underlined w-full translate-x-full pb-1 opacity-0 after:content-none md:w-auto md:transform-none md:opacity-100 md:transition-none md:after:content-normal md:after:content-['']"
+              custom
+            >
+              uses
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-serif font-medium uppercase text-bermuda">Useful</h2>
+        <ul class="flex flex-col gap-2">
+          <li>
+            <Link
+              href="mailto:peterbartha@pm.me"
+              target="_blank"
+              class="underlined w-full translate-x-full pb-1 opacity-0 after:content-none md:w-auto md:transform-none md:opacity-100 md:transition-none md:after:content-normal md:after:content-['']"
+              custom
+            >
+              contact
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/rss.xml"
+              target="_blank"
+              class="underlined w-full translate-x-full pb-1 opacity-0 after:content-none md:w-auto md:transform-none md:opacity-100 md:transition-none md:after:content-normal md:after:content-['']"
+              custom
+            >
+              RSS
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guestbook/"
+              class="underlined w-full translate-x-full pb-1 opacity-0 after:content-none md:w-auto md:transform-none md:opacity-100 md:transition-none md:after:content-normal md:after:content-['']"
+              custom
+            >
+              guestbook
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://github.com/peterbartha/peterbartha.com"
+              target="_blank"
+              class="underlined w-full translate-x-full pb-1 opacity-0 after:content-none md:w-auto md:transform-none md:opacity-100 md:transition-none md:after:content-normal md:after:content-['']"
+              custom
+            >
+              source code
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-12 sm:mt-16">
+    <div
+      class="flex flex-col-reverse justify-between gap-6 border-t border-t-bermuda py-6 text-center text-sm sm:flex-row sm:text-left"
+    >
+      <p>&copy; {new Date().getFullYear()} Peter Bartha. All Rights Reserved.</p>
+      <p>
+        Designed in <Link
+          href="https://www.figma.com/"
+          target="_blank"
+          class="link hover:text-white"
+          custom
+        >
+          Figma
+        </Link>, built with
+        <Link href="https://astro.build/" target="_blank" class="link hover:text-white" custom>
+          Astro
+        </Link> and <Link
+          href="https://tailwindcss.com/"
+          target="_blank"
+          class="link hover:text-white"
+          custom
+        >
+          Tailwind CSS
+        </Link>, deployed with <Link
+          href="https://vercel.com/"
+          target="_blank"
+          class="link hover:text-white"
+          custom
+        >
+          Vercel
+        </Link>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .link:hover {
+    text-shadow: 0px 2px 1px hsl(var(--color-indigo));
+  }
+</style>

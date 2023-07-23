@@ -1,4 +1,5 @@
 ---
+import Footer from '@components/Footer.astro';
 import Navigation from '@components/Navigation.astro';
 import SeoMeta from '@components/SeoMeta.astro';
 import '@styles/global.css';
@@ -55,6 +56,7 @@ const { meta } = Astro.props;
     <main>
       <Navigation />
       <slot />
+      <Footer />
     </main>
   </body>
 </html>
