@@ -1,0 +1,56 @@
+[
+  {
+    "name": "vercel-bun",
+    "description": "🥟 Bun runtime for ▲ Vercel Serverless Functions",
+    "url": "https://github.com/peterbartha/vercel-bun",
+    "demoUrl": "",
+    "technologies": ["TypeScript", "Shell"],
+    "role": "author",
+    "isFeatured": true
+  },
+  {
+    "name": "deno-playground",
+    "description": "🦕 The unofficial Deno Playground for explorers (and developers)",
+    "url": "https://github.com/peterbartha/deno-playground",
+    "demoUrl": "https://deno-playground.peterbartha.com",
+    "technologies": ["React", "TypeScript", "SCSS"],
+    "role": "author",
+    "isFeatured": false
+  },
+  {
+    "name": "peterbartha.com",
+    "description": "🚀 My personal site built with Astro, Tailwind CSS, and Vercel",
+    "url": "https://github.com/peterbartha/peterbartha.com",
+    "demoUrl": "https://peterbartha.com",
+    "technologies": ["Astro", "TypeScript", "JavaScript", "Tailwind"],
+    "role": "author",
+    "isFeatured": false
+  },
+  {
+    "name": "cooperatio",
+    "description": "🕸 Real-time collaborative JSON and text editing with Operational Transformation",
+    "url": "https://github.com/peterbartha/cooperatio",
+    "demoUrl": "",
+    "technologies": ["TypeScript"],
+    "role": "author",
+    "isFeatured": false
+  },
+  {
+    "name": "inkdrop-octopus-theme",
+    "description": "🐙 Octopus Dark UI theme for Inkdrop e2e encrypted note-taking app",
+    "url": "https://github.com/peterbartha/inkdrop-octopus-dark-ui-theme",
+    "demoUrl": "",
+    "technologies": ["TypeScript", "SCSS", "JavaScript"],
+    "role": "author",
+    "isFeatured": false
+  },
+  {
+    "name": "lost-cities-calculator",
+    "description": "🃏 Score calculator for the Lost Cities 2-player card game",
+    "url": "https://github.com/peterbartha/lost-cities-calculator",
+    "demoUrl": "https://lost-cities-calculator.vercel.app",
+    "technologies": ["Svelte", "TypeScript", "JavaScript", "Tailwind"],
+    "role": "author",
+    "isFeatured": false
+  }
+]

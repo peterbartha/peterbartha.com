@@ -1,0 +1,68 @@
+---
+import Badge from '@components/Badge.astro';
+import Button from '@components/Button.astro';
+import Icon from '@components/Icon.astro';
+
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  demoUrl?: string;
+  technologies: string[];
+  role: 'author' | 'contributor' | 'maintainer' | string;
+  isFeatured: boolean;
+}
+const { name, description, url, demoUrl, technologies, role } = Astro.props;
+---
+
+<section class="shadow-default flex flex-col gap-1 rounded-2xl bg-white p-8">
+  <div class="mb-2 flex flex-row items-center justify-between gap-4">
+    <h3 class="min-w-0 flex-1 truncate text-2xl font-bold">{name}</h3>
+    <Badge class="flex-none" value={role} />
+  </div>
+
+  {description && <p>{description}</p>}
+
+  <ul class="mt-2 flex flex-wrap gap-4">
+    {
+      technologies.map(technology => (
+        <li class="flex items-center gap-[5px] rounded-md py-1 text-sm">
+          <Icon name={`${technology.toLowerCase()}-logo`} class="w-5" />
+          {technology}
+        </li>
+      ))
+    }
+  </ul>
+
+  <div class="flex-cols mt-4 flex flex-1 flex-col justify-end">
+    <hr class="mb-4 border-mint" />
+
+    <div class="flex gap-4">
+      <Button
+        size="small"
+        href={url}
+        aria-label={`Open ${name} repository in a new tab`}
+        target="_blank"
+      >
+        <span class="flex items-center gap-2">
+          <Icon name="github-logo" class="w-5 fill-current" /> Source</span
+        >
+      </Button>
+      {
+        demoUrl && (
+          <Button
+            size="small"
+            href={demoUrl}
+            aria-label={`Open demo application of ${name} repository in a new tab`}
+            target="_blank"
+          >
+            {' '}
+            <span class="flex items-center gap-2">
+              <Icon name="arrow-top-right-on-square" class="w-5 text-current" /> Demo
+            </span>
+          </Button>
+        )
+      }
+    </div>
+  </div>
+</section>

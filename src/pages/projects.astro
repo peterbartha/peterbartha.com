@@ -1,0 +1,62 @@
+---
+import vercelBunImage from '@assets/vercel-bun.png';
+import { Picture } from '@astrojs/image/components';
+import Link from '@components/Link.astro';
+import ProjectCard from '@components/ProjectCard.astro';
+import type { Metadata } from '@components/SeoMeta.astro';
+import contributions from '@data/contributions.json';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const meta: Metadata = {
+  title: 'Projects',
+  description:
+    'My love for open source has driven me to contribute to various projects and author my own, which have helped me learn, practice and grow',
+};
+---
+
+<BaseLayout {meta}>
+  <article class="container min-h-[calc(100vh-82px)] py-10 md:py-24">
+    <h1 class="line-in flex animate-reveal flex-col font-sans">
+      <span class="dot text-5xl font-bold md:text-4xl lg:text-6xl xl:text-7xl">Projects</span>
+    </h1>
+    <p class="my-10">
+      Over the past decade, I've dedicated a significant portion of my life and free time (beside
+      office hours) to working on the <Link
+        class="text-primary-500 inline-flex font-medium underline underline-offset-2"
+        href="https://tresorit.com"
+        target="_blank"
+      >
+        Tresorit
+      </Link> end-to-end encrypted cloud service. Simultaneously, my love for open source has driven
+      me to contribute to various projects and author my own. Here is a list of projects that I have
+      contributed to and authored, which have helped me learn, practice and grow.
+    </p>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      {
+        contributions.map(project => {
+          if (project.isFeatured) {
+            return (
+              <section class="mb-0 mt-16 flex w-full flex-col md:col-span-2 md:mb-16 md:grid md:grid-cols-2">
+                <div class="hidden md:block md:w-[calc(100%+64px)] md:bg-transparent">
+                  <Picture
+                    class="shadow-default aspect-video h-full w-full rounded-t-2xl object-cover md:rounded-2xl"
+                    src={vercelBunImage}
+                    widths={[400, 800]}
+                    sizes="(min-width: 1024px) 60vw, 100vw"
+                    aspectRatio="20:15"
+                    alt="Hiking tour in Tenerife"
+                  />
+                </div>
+                <div class="relative -top-8 flex w-full flex-col justify-end md:right-4 md:top-8 md:w-[calc(100%+16px)]">
+                  <ProjectCard {...project} />
+                </div>
+              </section>
+            );
+          }
+          return <ProjectCard {...project} />;
+        })
+      }
+    </div>
+  </article>
+</BaseLayout>

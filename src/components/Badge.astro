@@ -1,0 +1,17 @@
+---
+interface Props {
+  value: string;
+  class?: string;
+}
+const { value } = Astro.props;
+---
+
+<span class="max-w-max rounded-full bg-gradient-to-r from-mint to-indigo-800 p-[1.5px]">
+  <span class="flex items-center rounded-full bg-white">
+    <span
+      class="inline-block max-w-max bg-gradient-to-r from-mint to-indigo-800 bg-clip-text px-2 py-0.5 text-xs font-medium uppercase text-transparent"
+    >
+      {value}
+    </span>
+  </span>
+</span>
