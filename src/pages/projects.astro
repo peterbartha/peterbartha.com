@@ -37,7 +37,7 @@ const meta: Metadata = {
         contributions.map(project => {
           if (project.isFeatured) {
             return (
-              <section class="mb-0 mt-16 flex w-full flex-col md:col-span-2 md:mb-16 md:grid md:grid-cols-2">
+              <section class="mb-0 mt-16 flex w-full flex-col md:col-span-2 md:mb-8 md:grid md:grid-cols-2">
                 <div class="hidden md:block md:w-[calc(100%+64px)] md:bg-transparent">
                   <Picture
                     class="shadow-default aspect-video h-full w-full rounded-t-2xl object-cover md:rounded-2xl"
@@ -45,7 +45,7 @@ const meta: Metadata = {
                     widths={[400, 800]}
                     sizes="(min-width: 1024px) 60vw, 100vw"
                     aspectRatio="20:15"
-                    alt="Hiking tour in Tenerife"
+                    alt={project.description}
                   />
                 </div>
                 <div class="relative -top-8 flex w-full flex-col justify-end md:right-4 md:top-8 md:w-[calc(100%+16px)]">
