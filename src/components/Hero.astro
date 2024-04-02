@@ -1,7 +1,7 @@
 ---
 import Button from './Button.astro';
 import portraitImage from '../assets/peter-bartha.png';
-import { Picture } from '@astrojs/image/components';
+import { Picture } from 'astro:assets';
 ---
 
 <section
@@ -28,7 +28,6 @@ import { Picture } from '@astrojs/image/components';
       src={portraitImage}
       widths={[400, 800, 1000]}
       sizes="(min-width: 768px) 50vw, 100vw"
-      aspectRatio="1:1"
       alt="Portrait of Peter Bartha"
     />
   </div>

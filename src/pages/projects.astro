@@ -1,6 +1,6 @@
 ---
 import vercelBunImage from '@assets/vercel-bun.png';
-import { Picture } from '@astrojs/image/components';
+import { Picture } from 'astro:assets';
 import Link from '@components/Link.astro';
 import ProjectCard from '@components/ProjectCard.astro';
 import type { Metadata } from '@components/SeoMeta.astro';
@@ -44,7 +44,6 @@ const meta: Metadata = {
                     src={vercelBunImage}
                     widths={[400, 800]}
                     sizes="(min-width: 1024px) 60vw, 100vw"
-                    aspectRatio="20:15"
                     alt={project.description}
                   />
                 </div>

@@ -1,6 +1,6 @@
 ---
 import aboutMeImage from '@assets/about-me.png';
-import { Picture } from '@astrojs/image/components';
+import { Picture } from 'astro:assets';
 import Button from '@components/Button.astro';
 import Hero from '@components/Hero.astro';
 import Icon from '@components/Icon.astro';
@@ -26,7 +26,6 @@ const meta: Metadata = {
           src={aboutMeImage}
           widths={[800, 1200, 1600]}
           sizes="(min-width: 1024px) 60vw, 100vw"
-          aspectRatio="20:15"
           alt="Hiking tour in Tenerife"
         />
       </div>
