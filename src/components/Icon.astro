@@ -8,7 +8,10 @@ export interface Props extends HTMLAttributes<'svg'> {
 
 const parseSvg = async (name: string) => {
   const searchPath = `/src/assets/icons/${name}.svg`;
-  const svgModules = import.meta.glob<string>('/src/assets/icons/*.svg', { as: 'raw' });
+  const svgModules = import.meta.glob<string>('/src/assets/icons/*.svg', {
+    query: '?raw',
+    import: 'default',
+  });
 
   const module = svgModules[searchPath];
   if (!module) {

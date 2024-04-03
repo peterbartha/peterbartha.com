@@ -19,10 +19,10 @@ import { Picture } from 'astro:assets';
   </div>
   <div class="relative mt-4 aspect-square w-[70%] flex-none md:mt-0 md:w-full md:flex-1">
     <div
-      class="masked-blob absolute aspect-square w-full -translate-x-8 -translate-y-6 scale-110 bg-[url('../assets/wave.svg')] bg-[length:40px] bg-repeat"
+      class="masked-blob absolute aspect-square w-full -translate-x-8 -translate-y-6 scale-110 bg-[url('/src/assets/wave.svg')] bg-[length:40px] bg-repeat"
     >
     </div>
-    <div class="absolute aspect-square w-full bg-[url('../assets/blob.svg')] bg-no-repeat"></div>
+    <div class="absolute aspect-square w-full bg-[url('/src/assets/blob.svg')] bg-no-repeat"></div>
     <Picture
       class="masked-portrait relative aspect-square"
       src={portraitImage}
@@ -35,10 +35,10 @@ import { Picture } from 'astro:assets';
 
 <style>
   .masked-blob {
-    mask: url('../assets/blob.svg');
+    mask: url('/src/assets/blob.svg');
   }
 
   .masked-portrait {
-    mask: url('../assets/hero.svg');
+    mask: url('/src/assets/hero.svg');
   }
 </style>
